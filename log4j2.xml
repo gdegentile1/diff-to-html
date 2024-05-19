@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+  <Appenders>
+    <Console name="STDOUT" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+      <!-- PatternLayout pattern="%d %-5p [%t] %C{2} (%F:%L) - %m%n"/ -->
+      <!-- PatternLayout pattern="[%highlight{%-5level}] %d{DEFAULT} %c{1}.%M() - %msg%n%throwable{short.lineNumber}" / -->
+    </Console>
+    <File name="MyFile" fileName="all.log" immediateFlush="false" append="false">
+        <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </File>
+
+  </Appenders>
+  <Loggers>
+    <!--  <Logger name="org.apache.log4j.xml" level="info"/> -->
+    <Root level="debug">
+      <AppenderRef ref="STDOUT"/>
+      <AppenderRef ref="MyFile"/>
+    </Root>
+  </Loggers>
+</Configuration>

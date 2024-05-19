@@ -11,6 +11,8 @@ import static j2html.TagCreator.pre;
 import static j2html.TagCreator.rawHtml;
 import static j2html.TagCreator.script;
 import static j2html.TagCreator.title;
+import static j2html.TagCreator.meta;
+
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -126,8 +128,8 @@ public class DirectoryDiffHtmlBuilder extends HtmlBuilder {
 	@Override
 	protected Tag createHead() {
 		return head()
-				.withCharset(PREFERRED_ENCODING)
-				.with(title(title), createStyleTag());
+				//.withCharset(PREFERRED_ENCODING)
+				.with(meta().withCharset(PREFERRED_ENCODING), title(title), createStyleTag());
 	}
 
 	@Override

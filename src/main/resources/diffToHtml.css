@@ -61,6 +61,11 @@ a:hover
      text-decoration:underline; 
      cursor:pointer;  
 }
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+}
 .delete {
     background-color: #ffeef0;
 }

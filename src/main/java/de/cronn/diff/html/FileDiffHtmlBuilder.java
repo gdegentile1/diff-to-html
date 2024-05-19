@@ -6,6 +6,7 @@ import static j2html.TagCreator.body;
 import static j2html.TagCreator.br;
 import static j2html.TagCreator.div;
 import static j2html.TagCreator.head;
+import static j2html.TagCreator.meta;
 import static j2html.TagCreator.pre;
 import static j2html.TagCreator.table;
 import static j2html.TagCreator.td;
@@ -13,6 +14,7 @@ import static j2html.TagCreator.text;
 import static j2html.TagCreator.th;
 import static j2html.TagCreator.title;
 import static j2html.TagCreator.tr;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -116,8 +118,8 @@ public class FileDiffHtmlBuilder extends HtmlBuilder {
 		String title = "diff " + fileLeftSimpleName + " " + fileRightSimpleName;
 
 		return head()
-				.withCharset(PREFERRED_ENCODING)
-				.with(title(title), createStyleTag());
+				//.withCharset(PREFERRED_ENCODING)
+				.with(meta().withCharset(PREFERRED_ENCODING), title(title), createStyleTag());
 	}
 
 	@Override

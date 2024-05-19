@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>de.cronn</groupId>
+	<artifactId>diff-to-html</artifactId>
+	<name>diff-to-html</name>
+	<version>1.5</version>
+
+
+	<properties>
+<!--
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<log4j.version>2.20.0</log4j.version>
+		<commons-lang.version>2.6</commons-lang.version>
+		<rsyntaxtextarea.version>3.3.4</rsyntaxtextarea.version>
+		<batik-gui-util.version>1.17</batik-gui-util.version>
+-->
+	</properties>
+
+  <repositories>
+    <repository>
+      <id>Central</id>
+      <name>your custom repo</name>
+      <url>https://repo1.maven.org/maven2/</url>
+    </repository>
+    <repository>
+      <id>Sonatype</id>
+      <name>your custom repo</name>
+      <url>https://oss.sonatype.org/content/repositories/releases/</url>
+    </repository>
+    <repository>
+      <id>Spring Plugins</id>
+      <name>your custom repo</name>
+      <url>https://repo.spring.io/plugins-release/</url>
+    </repository>
+    <repository>
+      <id>bintray</id>
+      <name>your custom repo</name>
+      <url>https://dl.bintray.com/ottogroup/maven/</url>
+    </repository>
+  </repositories>
+  
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
+		<dependency>
+		    <groupId>commons-lang</groupId>
+		    <artifactId>commons-lang</artifactId>
+		    <version>${commons-lang.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+		<dependency>
+		    <groupId>org.apache.logging.log4j</groupId>
+		    <artifactId>log4j-core</artifactId>
+		    <version>${log4j-core.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.github.java-diff-utils/java-diff-utils -->
+		<dependency>
+		    <groupId>io.github.java-diff-utils</groupId>
+		    <artifactId>java-diff-utils</artifactId>
+		    <version>${java-diff-utils.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+		<dependency>
+		    <groupId>commons-io</groupId>
+		    <artifactId>commons-io</artifactId>
+		    <version>${commons-io.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-cli/commons-cli -->
+		<dependency>
+		    <groupId>commons-cli</groupId>
+		    <artifactId>commons-cli</artifactId>
+		    <version>${commons-cli.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-text -->
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-text</artifactId>
+		    <version>${commons-text.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.j2html/j2html -->
+		<dependency>
+		    <groupId>com.j2html</groupId>
+		    <artifactId>j2html</artifactId>
+		    <version>${j2html.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.googlecode.juniversalchardet/juniversalchardet -->
+		<dependency>
+		    <groupId>com.googlecode.juniversalchardet</groupId>
+		    <artifactId>juniversalchardet</artifactId>
+		    <version>${juniversalchardet.version}</version>
+		</dependency>
+
+<!-- https://mvnrepository.com/artifact/junit/junit -->
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.2</version>
+    <scope>test</scope>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.github.stefanbirkner/system-rules -->
+<dependency>
+    <groupId>com.github.stefanbirkner</groupId>
+    <artifactId>system-rules</artifactId>
+    <version>1.19.0</version>
+    <scope>test</scope>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
+<dependency>
+    <groupId>org.assertj</groupId>
+    <artifactId>assertj-core</artifactId>
+    <version>3.25.3</version>
+    <scope>test</scope>
+</dependency>
+
+	</dependencies>
+
+</project>
