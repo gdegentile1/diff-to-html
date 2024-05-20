@@ -42,6 +42,7 @@ public class JavaDiffUtils2HtmlWrapper {
 
 	private int initialPostionInHtmlBuilder;
 	private DiffToHtmlParameters params;
+	private Patch<String> diffPatches;
 
 
 
@@ -56,8 +57,7 @@ public class JavaDiffUtils2HtmlWrapper {
 		return htmlBuilder;
 	}
 
-	private void appendDiffToBuilder(List<String> originalLines, List<String> revisedLines) {
-		Patch<String> diffPatches;
+	public void appendDiffToBuilder(List<String> originalLines, List<String> revisedLines) {
 		diffPatches = DiffUtils.diff(originalLines, revisedLines);
 		
 		List<AbstractDelta<String>> diffPatchDeltas = new ArrayList<>(diffPatches.getDeltas());
@@ -253,4 +253,25 @@ public class JavaDiffUtils2HtmlWrapper {
 	private int getRevLineNr(int revStart) {
 		return revStart + contextLinesCounter + revLinesCounter;
 	}
+
+	public FileDiffHtmlBuilder getHtmlBuilder() {
+		return htmlBuilder;
+	}
+
+	public void setHtmlBuilder(FileDiffHtmlBuilder htmlBuilder) {
+		this.htmlBuilder = htmlBuilder;
+	}
+
+	public DiffToHtmlParameters getParams() {
+		return params;
+	}
+
+	public void setParams(DiffToHtmlParameters params) {
+		this.params = params;
+	}
+
+	public Patch<String> getDiffPatches() {
+		return diffPatches;
+	}
+
 }
