@@ -15,6 +15,7 @@ import java.nio.file.Paths;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import de.cronn.diff.Main;
 import de.cronn.diff.util.DiffToHtmlParameters;
@@ -79,7 +80,7 @@ public abstract class HtmlBuilder {
 	}
 
 	protected String getRelativePath(String path) {
-		if(path.isEmpty()) {
+		if(StringUtils.isBlank(path)) {
 			return "";
 		}
 		
