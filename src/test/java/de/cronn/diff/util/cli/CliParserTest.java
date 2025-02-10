@@ -10,7 +10,7 @@ import org.apache.commons.cli.AmbiguousOptionException;
 import org.apache.commons.cli.MissingArgumentException;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.UnrecognizedOptionException;
-import org.apache.commons.text.StrBuilder;
+import org.apache.commons.text.TextStringBuilder;
 import org.assertj.core.api.Assertions;
 import org.junit.After;
 import org.junit.Before;
@@ -109,7 +109,7 @@ public class CliParserTest extends TestBase {
 	}
 
 	private String getCliArgsAsString(DiffToHtmlCommandLine cli) {
-		StrBuilder sb = new StrBuilder();
+		TextStringBuilder sb = new TextStringBuilder();
 
 		sb.appendln(cli.getInputLeft());
 		sb.appendln(cli.getInputRight());
