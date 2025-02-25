@@ -66,25 +66,25 @@ public class DirectoryDiffHtmlBuilder extends HtmlBuilder {
 
 	private DiffToHtmlParameters params;
 
-	private List<Tag> changedTextFiles = new ArrayList<Tag>();
+	private List<Tag> changedTextFiles = new ArrayList<>();
 
-	private List<Tag> changedBinaryFiles = new ArrayList<Tag>();
+	private List<Tag> changedBinaryFiles = new ArrayList<>();
 
-	private List<Tag> uniqueFilesLeft = new ArrayList<Tag>();
+	private List<Tag> uniqueFilesLeft = new ArrayList<>();
 
-	private List<Tag> uniqueFilesRight = new ArrayList<Tag>();
+	private List<Tag> uniqueFilesRight = new ArrayList<>();
 
 	private int changedTextDivCnt = 0;
-	private List<String> changedTextDivIds = new ArrayList<String>();
+	private List<String> changedTextDivIds = new ArrayList<>();
 
 	private int changedBinaryDivCnt = 0;
-	private List<String> changedBinaryDivIds = new ArrayList<String>();
+	private List<String> changedBinaryDivIds = new ArrayList<>();
 
 	private int uniqueFileLeftDivCnt = 0;
-	private List<String> uniqueFileLeftDivIds = new ArrayList<String>();
+	private List<String> uniqueFileLeftDivIds = new ArrayList<>();
 
 	private int uniqueFileRightDivCnt = 0;
-	private List<String> uniqueFileRightDivIds = new ArrayList<String>();
+	private List<String> uniqueFileRightDivIds = new ArrayList<>();
 
 	public DirectoryDiffHtmlBuilder(DiffToHtmlParameters params) {
 		super(params);
@@ -131,7 +131,7 @@ public class DirectoryDiffHtmlBuilder extends HtmlBuilder {
 
 	@Override
 	public Tag createBody() {
-		List<String> combinedLists = new ArrayList<String>();
+		List<String> combinedLists = new ArrayList<>();
 		combinedLists.addAll(changedTextDivIds);
 		combinedLists.addAll(changedBinaryDivIds);
 		combinedLists.addAll(uniqueFileLeftDivIds);
