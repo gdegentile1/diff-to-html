@@ -67,7 +67,8 @@ public class JavaDiffUtils2HtmlWrapper {
 			AbstractDelta<String> currentDelta = diffPatchDeltas.get(0);
 			currentDeltas.add(currentDelta);
 
-			for (int i = 1; i < diffPatchDeltas.size(); i++) {
+			int size = diffPatchDeltas.size();
+			for (int i = 1; i < size; i++) {
 				AbstractDelta<String> nextDelta = diffPatchDeltas.get(i);
 
 				if (nextDeltaIsTooCloseToCurrentDelta(currentDelta, nextDelta)) {
