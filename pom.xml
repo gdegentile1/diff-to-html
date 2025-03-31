@@ -20,29 +20,6 @@
 		<batik-gui-util.version>1.17</batik-gui-util.version>
 -->
 	</properties>
-
-  <repositories>
-    <repository>
-      <id>Central</id>
-      <name>your custom repo</name>
-      <url>https://repo1.maven.org/maven2/</url>
-    </repository>
-    <repository>
-      <id>Sonatype</id>
-      <name>your custom repo</name>
-      <url>https://oss.sonatype.org/content/repositories/releases/</url>
-    </repository>
-    <repository>
-      <id>Spring Plugins</id>
-      <name>your custom repo</name>
-      <url>https://repo.spring.io/plugins-release/</url>
-    </repository>
-    <repository>
-      <id>bintray</id>
-      <name>your custom repo</name>
-      <url>https://dl.bintray.com/ottogroup/maven/</url>
-    </repository>
-  </repositories>
   
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
