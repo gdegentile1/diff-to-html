@@ -101,7 +101,7 @@ public class FileDiffHtmlBuilder extends HtmlBuilder {
 		String[] textFileLines = textFile.split(System.lineSeparator());
 		for(int i = 0; i < textFileLines.length; i++) {
 			int line = i+1;
-			appendLine(textFileLines[i], new Integer(line).toString(), " ", CSS_CLASS_CONTEXT);
+			appendLine(textFileLines[i], String.valueOf(line), " ", CSS_CLASS_CONTEXT);
 		}
 	}
 

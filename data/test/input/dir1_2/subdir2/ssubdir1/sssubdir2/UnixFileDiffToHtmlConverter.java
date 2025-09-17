@@ -153,11 +153,11 @@ public class UnixFileDiffToHtmlConverter {
 	private void parseInfoLineToCurrentDiffLinesInfo(String infoLine) {
 		Matcher matcherLeft = diffLineNrsPatternLeft.matcher(infoLine);
 		if (matcherLeft.find()) {
-			currentDiffLinesInfo.lineLeft = new Integer(matcherLeft.group(1));
+			currentDiffLinesInfo.lineLeft = Integer.valueOf(matcherLeft.group(1));
 		}
 		Matcher matcherRight = diffLineNrsPatternRight.matcher(infoLine);
 		if (matcherRight.find()) {
-			currentDiffLinesInfo.lineRight = new Integer(matcherRight.group(1));
+			currentDiffLinesInfo.lineRight = Integer.valueOf(matcherRight.group(1));
 		}
 	}
 
