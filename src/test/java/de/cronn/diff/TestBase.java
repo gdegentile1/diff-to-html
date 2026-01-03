@@ -9,6 +9,7 @@ import java.nio.file.Paths;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Strings;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -100,15 +101,15 @@ public class TestBase {
 	}
 
 	private String normalizeTestDataDirs(String s) {
-		s = StringUtils.replace(s, TEST_DATA_INPUT_DIR_WIN, TEST_DATA_INPUT_DIR);
-		s = StringUtils.replace(s, TEST_DATA_OUTPUT_DIR_WIN, TEST_DATA_OUTPUT_DIR);
-		s = StringUtils.replace(s, TEST_DATA_VALIDATION_DIR_WIN, TEST_DATA_VALIDATION_DIR);
+		s = Strings.CS.replace(s, TEST_DATA_INPUT_DIR_WIN, TEST_DATA_INPUT_DIR);
+		s = Strings.CS.replace(s, TEST_DATA_OUTPUT_DIR_WIN, TEST_DATA_OUTPUT_DIR);
+		s = Strings.CS.replace(s, TEST_DATA_VALIDATION_DIR_WIN, TEST_DATA_VALIDATION_DIR);
 		return s;
 	}
 
 	private String normalizeWorkingDir(String s) {
 		String workingDir = FileHelper.getWorkingDir();
-		return StringUtils.replace(s, workingDir, "[current/working/directory/]");
+		return Strings.CS.replace(s, workingDir, "[current/working/directory/]");
 	}
 
 	private String readFileToString(String filePath) throws IOException {
